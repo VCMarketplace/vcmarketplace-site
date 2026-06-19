@@ -93,8 +93,9 @@ body::before{
 
 .menu{
     display:flex;
-    gap:30px;
-    list-style:none;
+    gap:35px;
+    margin-left:80px;
+}
 }
 
 .menu a{
