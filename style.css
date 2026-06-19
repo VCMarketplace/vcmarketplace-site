@@ -1,1 +1,295 @@
+/* RESET */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#050510;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* FUNDO */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top right,#7b2cff33 0%,transparent 40%),
+    radial-gradient(circle at bottom left,#0066ff22 0%,transparent 40%);
+    z-index:-1;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.5);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:999;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo img{
+    height:60px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#7b2cff;
+}
+
+/* BOTÕES */
+
+.btn-header,
+.btn-primary{
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+
+    background:linear-gradient(
+    90deg,
+    #0066ff,
+    #7b2cff
+    );
+
+    color:white;
+
+    box-shadow:
+    0 0 20px rgba(123,44,255,.5);
+}
+
+.btn-secondary{
+    padding:14px 28px;
+    border-radius:50px;
+    border:1px solid #7b2cff;
+    color:white;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:10px 20px;
+    border:1px solid #7b2cff;
+    border-radius:30px;
+    margin-bottom:25px;
+    color:#7b2cff;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1.1;
+    margin-bottom:20px;
+
+    background:linear-gradient(
+    90deg,
+    #ffffff,
+    #4f8cff,
+    #b155ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    font-size:20px;
+    color:#bdbdbd;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+/* CARDS HERO */
+
+.hero-image{
+    display:grid;
+    gap:20px;
+}
+
+.hero-card{
+    padding:25px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 25px rgba(123,44,255,.15);
+}
+
+.hero-card h3{
+    margin-bottom:10px;
+    color:#7b2cff;
+}
+
+/* SEÇÕES */
+
+.section{
+    padding:100px 0;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:42px;
+}
+
+.dark{
+    background:#090916;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    padding:30px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 30px rgba(123,44,255,.4);
+}
+
+/* SOBRE */
+
+.sobre-grid{
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.foto-perfil{
+    width:100%;
+    border-radius:25px;
+
+    border:2px solid #7b2cff;
+
+    box-shadow:
+    0 0 35px rgba(123,44,255,.5);
+}
+
+/* CONTATO */
+
+.contato{
+    text-align:center;
+}
+
+.contato-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.contato-links a{
+    text-decoration:none;
+    color:white;
+    padding:15px 25px;
+    border-radius:50px;
+
+    border:1px solid #7b2cff;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 0;
+    text-align:center;
+    color:#999;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.hero-grid{
+    grid-template-columns:1fr;
+}
+
+.sobre-grid{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.menu{
+    display:none;
+}
+
+}
