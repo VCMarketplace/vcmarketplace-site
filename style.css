@@ -2,13 +2,9 @@
 :root{
 
     --primary:#9D4EDD;
-
     --secondary:#FF1493;
-
     --dark:#04020D;
-
     --card:#0B061A;
-
     --text:#FFFFFF;
 
 }
@@ -114,6 +110,18 @@ body::before{
 .btn-primary,
 .btn-header{
 
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:600;
+
     background:linear-gradient(
         90deg,
         #9D4EDD,
@@ -189,10 +197,6 @@ body::before{
 
 }
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
 .hero p{
     font-size:20px;
     color:#bdbdbd;
@@ -253,6 +257,10 @@ body::before{
 }
 
 .card{
+
+    padding:30px;
+
+    border-radius:20px;
 
     background:rgba(255,255,255,.03);
 
@@ -371,14 +379,16 @@ footer{
 .logo{
     display:flex;
     align-items:center;
-    gap:18px;
+    gap:20px;
 }
 
 .logo img{
-    height:95px;
+
+    height:110px;
+
     filter:
-        drop-shadow(0 0 10px #ff00cc)
-        drop-shadow(0 0 20px #ff00cc);
+        drop-shadow(0 0 10px #9D4EDD)
+        drop-shadow(0 0 25px #FF1493);
 }
 
 .logo-text{
@@ -387,15 +397,16 @@ footer{
 }
 
 .logo-title{
-    font-size:2rem;
+
+    font-size:2.4rem;
+
     font-weight:800;
-    letter-spacing:1px;
 
     background:linear-gradient(
         90deg,
         #ffffff,
-        #b347ff,
-        #ff1493
+        #9D4EDD,
+        #FF1493
     );
 
     -webkit-background-clip:text;
@@ -403,7 +414,10 @@ footer{
 }
 
 .logo-subtitle{
-    font-size:.8rem;
+
     letter-spacing:4px;
-    color:#d9d9d9;
+
+    font-size:.75rem;
+
+    color:#cfcfcf;
 }
