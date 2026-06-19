@@ -1,4 +1,17 @@
 /* RESET */
+:root{
+
+    --primary:#9D4EDD;
+
+    --secondary:#FF1493;
+
+    --dark:#04020D;
+
+    --card:#0B061A;
+
+    --text:#FFFFFF;
+
+}
 
 *{
     margin:0;
@@ -20,12 +33,33 @@ body{
 /* FUNDO */
 
 body::before{
+
     content:"";
+
     position:fixed;
+
     inset:0;
+
     background:
-    radial-gradient(circle at top right,#7b2cff33 0%,transparent 40%),
-    radial-gradient(circle at bottom left,#0066ff22 0%,transparent 40%);
+
+    radial-gradient(
+        circle at top right,
+        rgba(255,20,147,.25),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at bottom left,
+        rgba(157,78,221,.20),
+        transparent 40%
+    ),
+
+    radial-gradient(
+        circle at center,
+        rgba(255,0,200,.08),
+        transparent 50%
+    );
+
     z-index:-1;
 }
 
@@ -77,23 +111,30 @@ body::before{
 
 /* BOTÕES */
 
-.btn-header,
-.btn-primary{
-    padding:14px 28px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
+.btn-primary,
+.btn-header{
 
     background:linear-gradient(
-    90deg,
-    #0066ff,
-    #7b2cff
+        90deg,
+        #9D4EDD,
+        #FF1493
     );
 
-    color:white;
+    box-shadow:
+        0 0 15px rgba(157,78,221,.7),
+        0 0 35px rgba(255,20,147,.5);
+
+    transition:.3s;
+}
+
+.btn-primary:hover,
+.btn-header:hover{
+
+    transform:translateY(-3px);
 
     box-shadow:
-    0 0 20px rgba(123,44,255,.5);
+        0 0 20px #9D4EDD,
+        0 0 50px #FF1493;
 }
 
 .btn-secondary{
@@ -129,16 +170,24 @@ body::before{
 }
 
 .hero h1{
-    font-size:64px;
-    line-height:1.1;
-    margin-bottom:20px;
+    font-size:5rem;
+    line-height:1;
+
+    font-weight:800;
+
+    margin-bottom:25px;
 
     background:linear-gradient(
-    90deg,
-    #ffffff,
-    #4f8cff,
-    #b155ff
+        90deg,
+        #ffffff,
+        #9D4EDD,
+        #FF1493
     );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
@@ -204,21 +253,44 @@ body::before{
 }
 
 .card{
-    padding:30px;
-    border-radius:20px;
 
     background:rgba(255,255,255,.03);
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,20,147,.25);
 
-    transition:.3s;
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
 }
 
 .card:hover{
+
     transform:translateY(-8px);
 
+    border-color:#FF1493;
+
     box-shadow:
-    0 0 30px rgba(123,44,255,.4);
+        0 0 15px #9D4EDD,
+        0 0 40px rgba(255,20,147,.4);
+
+}
+
+.card,
+.hero-card{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s;
+}
+
+.card.show,
+.hero-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
 }
 
 /* SOBRE */
