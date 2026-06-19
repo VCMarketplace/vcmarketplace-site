@@ -1,19 +1,17 @@
-// Scroll suave para links internos
+const observer = new IntersectionObserver(entries => {
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+    entries.forEach(entry => {
 
-    link.addEventListener("click", function(e){
+        if(entry.isIntersecting){
 
-        e.preventDefault();
+            entry.target.classList.add('show');
 
-        const target = document.querySelector(
-            this.getAttribute("href")
-        );
-
-        target.scrollIntoView({
-            behavior:"smooth"
-        });
+        }
 
     });
 
 });
+
+document
+.querySelectorAll('.card, .hero-card')
+.forEach(el => observer.observe(el));
