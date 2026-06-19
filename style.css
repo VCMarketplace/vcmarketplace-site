@@ -293,3 +293,45 @@ footer{
 }
 
 }
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo img{
+    height:95px;
+    filter:
+        drop-shadow(0 0 10px #ff00cc)
+        drop-shadow(0 0 20px #ff00cc);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-title{
+    font-size:2rem;
+    font-weight:800;
+    letter-spacing:1px;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #b347ff,
+        #ff1493
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.logo-subtitle{
+    font-size:.8rem;
+    letter-spacing:4px;
+    color:#d9d9d9;
+}
