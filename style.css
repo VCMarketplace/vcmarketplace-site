@@ -419,3 +419,35 @@ footer{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.cases-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:30px;
+}
+
+.cases-gallery a{
+    display:block;
+    overflow:hidden;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s;
+}
+
+.cases-gallery a:hover{
+    transform:translateY(-6px);
+    border-color:#9D4EDD;
+    box-shadow:
+        0 0 20px rgba(157,78,221,.35),
+        0 0 40px rgba(255,20,147,.20);
+}
+
+.cases-gallery img{
+    width:100%;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.cases-gallery a:hover img{
+    transform:scale(1.03);
+}
