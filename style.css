@@ -62,9 +62,9 @@ body::before{
 /* CONTAINER */
 
 .container{
-    width:96%;
-    max-width:1500px;
-    margin:auto;
+    width:100%;
+    max-width:none;
+    padding:0 40px;
 }
 
 /* HEADER */
