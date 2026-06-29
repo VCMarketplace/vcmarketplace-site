@@ -398,7 +398,8 @@ footer{
 
     background: linear-gradient(
         90deg,
-        #9D4EDD 0%,
+        #1A4BDD 0%,
+        #9D4EDD 25%,
         #FF1493 100%
     );
 
@@ -412,7 +413,8 @@ footer{
 
     background: linear-gradient(
         90deg,
-        #9D4EDD 0%,
+        #1A4BDD 0%,
+        #9D4EDD 25%,
         #FF1493 100%
     );
 
