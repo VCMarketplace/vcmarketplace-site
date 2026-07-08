@@ -94,6 +94,12 @@ body::before{
 .menu a:hover{
     color:#7b2cff;
 }
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
 
 /* BOTÕES */
 
@@ -392,5 +398,28 @@ footer{
 @media(max-width:768px){
     .logo img{
     width:180px;
+    }
+}
+@media (max-width: 900px){
+    .menu{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#080512;
+        flex-direction:column;
+        gap:25px;
+        padding:30px 0;
+        text-align:center;
+    }
+    .menu.active{
+        display:flex;
+    }
+    .menu-toggle{
+        display:block;
+    }
+    .btn{
+        display:none;
     }
 }
