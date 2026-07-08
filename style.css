@@ -30,33 +30,25 @@ body{
 /* FUNDO */
 
 body::before{
-
     content:"";
-
     position:fixed;
-
     inset:0;
-
     background:
-
     radial-gradient(
         circle at top right,
         rgba(255,20,147,.25),
         transparent 35%
     ),
-
     radial-gradient(
         circle at bottom left,
         rgba(157,78,221,.20),
         transparent 40%
     ),
-
     radial-gradient(
         circle at center,
         rgba(255,0,200,.08),
         transparent 50%
     );
-
     z-index:-1;
 }
 
@@ -119,6 +111,7 @@ body::before{
 
 .btn-primary,
 .btn-header{
+    white-space:nowrap;
     margin-left:auto;
     display:inline-block;
     padding:14px 28px;
@@ -131,19 +124,15 @@ body::before{
         #9D4EDD,
         #FF1493
     );
-
     box-shadow:
         0 0 15px rgba(157,78,221,.7),
         0 0 35px rgba(255,20,147,.5);
-
     transition:.3s;
 }
 
 .btn-primary:hover,
 .btn-header:hover{
-
     transform:translateY(-3px);
-
     box-shadow:
         0 0 20px #9D4EDD,
         0 0 50px #FF1493;
