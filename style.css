@@ -79,9 +79,6 @@ body::before{
     align-items:center;
     gap:40px;
 }
-.logo img{
-    height:60px;
-}
 .menu{
     display:flex;
     gap:35px;
@@ -324,7 +321,7 @@ footer{
 }
 .logo img{
     width:250px
-    height:auto;
+    height:250px;
     flex-shrink:0;
     filter:
         drop-shadow(0 0 10px #9D4EDD)
