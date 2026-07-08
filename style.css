@@ -395,11 +395,6 @@ footer{
         display:block;
     }
 }
-@media(max-width:768px){
-    .logo img{
-    width:180px;
-    }
-}
 @media (max-width: 900px){
     .menu{
         display:none;
