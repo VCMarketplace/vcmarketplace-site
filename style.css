@@ -24,6 +24,7 @@ body{
     background:#050510;
     color:#fff;
     overflow-x:hidden;
+    padding-top:95px;
 }
 
 /* FUNDO */
@@ -70,21 +71,29 @@ body::before{
 /* HEADER */
 
 .header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
     background: rgba(4,2,13,.90);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,20,147,.15);
-    box-shadow:
-        0 0 40px rgba(255,20,147,.08);
+    box-shadow: 0 0 40px rgba(255,20,147,.08);
+    backdrop-filter:blur(15px);
+    transition:.35s;
+}
+
+.header.scrolled{
+    padding:8px 0;
+    background:rgba(8,5,18,.92);
+
 }
 
 .nav{
-    width:100%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    padding: 20px 0;
-    width: 100%;
-    justify-content: space-between;
+    align-items:center;
 }
 
 .logo img{
@@ -94,7 +103,7 @@ body::before{
 .menu{
     display:flex;
     gap:35px;
-    margin-left:80px;
+    align-items:center;
 }
 
 .menu a{
