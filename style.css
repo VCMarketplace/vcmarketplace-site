@@ -320,8 +320,8 @@ footer{
     flex-shrink:0;
 }
 .logo img{
-    width:70px
-    height:70px;
+    width:75px;
+    height:75px;
     flex-shrink:0;
     filter:
         drop-shadow(0 0 10px #9D4EDD)
