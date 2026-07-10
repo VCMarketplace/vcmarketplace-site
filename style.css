@@ -423,7 +423,7 @@ footer{
 }
 @media(max-width:900px){
     .logo-subtitle{
-    display:none;
+    display:0.52rem;
 }
     .logo-title{
     font-size:1.6rem;
