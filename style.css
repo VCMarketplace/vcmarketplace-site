@@ -251,6 +251,17 @@ body::before{
 
 /* SOBRE */
 
+.sobre p {
+    margin-bottom: 24px;
+    line-height: 1.8;
+    color: #d5d5d5;
+}
+
+.sobre strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
 .sobre-grid{
     display:grid;
     grid-template-columns:350px 1fr;
