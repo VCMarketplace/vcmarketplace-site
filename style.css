@@ -251,6 +251,11 @@ body::before{
 
 /* SOBRE */
 
+.sobre p{
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
 .sobre-grid{
     display:grid;
     grid-template-columns:350px 1fr;
