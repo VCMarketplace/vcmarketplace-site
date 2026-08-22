@@ -338,3 +338,66 @@ body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;ba
   .case-card__image{height:280px}
 }
 .platform-logo img[src*="google.com/s2"]{filter:grayscale(1) brightness(0) invert(1)!important;opacity:.84}
+
+
+/* =========================================================
+   V5 — refinamentos finais de composição e proporção
+   ========================================================= */
+
+/* 01 — faixa de plataformas: peso visual consistente */
+.platform-item--hostinger .platform-logo img,
+.platform-item--cloudflare .platform-logo img{transform:scale(.78)}
+.platform-item--shopee .platform-logo img,
+.platform-item--magalu .platform-logo img{transform:scale(.90)}
+.platform-item--linkedin .platform-logo img{transform:scale(.82)}
+.platform-item--google-business .platform-logo img{transform:scale(.86)}
+
+/* 02 — hero: duas linhas limpas no desktop */
+@media (min-width:1041px){
+  .hero .container{width:min(1500px,calc(100% - 48px))}
+  .hero__grid{grid-template-columns:1.18fr 1fr;gap:52px}
+  .hero__content{max-width:none}
+  .hero h1{font-size:clamp(3.4rem,4.25vw,4.1rem);max-width:none;letter-spacing:-.064em}
+  .hero-title-line{display:block;white-space:nowrap}
+}
+
+/* 03 — narrativa problema / solução: quebras deliberadas */
+@media (min-width:1041px){
+  .story .container{width:min(1380px,calc(100% - 48px))}
+  .story__intro{max-width:1240px}
+  .story__intro h2{font-size:clamp(3.1rem,5vw,4.35rem);max-width:1240px}
+  .story__intro h2>span{display:block}
+  .story-title-line{white-space:nowrap}
+  .system-map{grid-template-columns:.70fr 1.45fr 1.10fr;gap:34px}
+  .system-map__solution h3{font-size:clamp(1.70rem,2.15vw,1.95rem);line-height:1.03;letter-spacing:-.045em}
+  .solution-title-line{display:block;white-space:nowrap}
+}
+
+/* 04 — copy de soluções */
+.solutions .section-heading p{max-width:760px;margin-inline:auto}
+
+/* 05 — cases: mais largura, não mais altura */
+@media (min-width:1041px){
+  .cases .container{width:min(1420px,calc(100% - 48px))}
+  .case-grid{gap:22px}
+  .case-card{min-height:390px;grid-template-columns:1.13fr .87fr}
+  .case-card__body{padding:31px 29px}
+  .case-card__image img{object-fit:contain;transform:scale(1);padding:0}
+  .case-card:hover .case-card__image img{transform:scale(1.04)}
+  .case-card__image::after{background:linear-gradient(90deg,transparent 62%,#09090d 100%)}
+}
+
+/* 06 — Sobre: título em uma linha no desktop */
+@media (min-width:1041px){
+  .about__grid{grid-template-columns:.64fr 1.48fr;gap:64px}
+  .about__content h2.about-title-line{font-size:clamp(2.62rem,3.55vw,3.28rem);white-space:nowrap;letter-spacing:-.052em}
+}
+
+/* Responsividade: no mobile as quebras voltam a ser naturais */
+@media (max-width:1040px){
+  .hero-title-line,.story-title-line,.solution-title-line,.about-title-line{white-space:normal!important}
+  .hero-title-line{display:block}
+  .story__intro h2>span,.solution-title-line{display:block}
+  .case-card{min-height:0}
+  .case-card__image img{padding:0;object-fit:cover}
+}
