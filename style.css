@@ -421,3 +421,82 @@ body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;ba
 
 /* 03 — A solução: mais conteúdo sem perder legibilidade */
 .system-map__solution>p{max-width:720px;line-height:1.78}
+
+/* =========================================================
+   V7 — correções finais de alinhamento e responsividade
+   ========================================================= */
+
+/* 01 — Diagrama: colunas externas simétricas para manter o hub no centro visual */
+.network{
+  grid-template-columns:124px minmax(180px,1fr) 124px;
+}
+.network__column--left,
+.network__column--right{
+  width:124px;
+}
+
+@media (max-width:1040px){
+  .network{grid-template-columns:100px minmax(110px,1fr) 100px}
+  .network__column--left,.network__column--right{width:100px}
+}
+
+@media (max-width:760px){
+  .network{grid-template-columns:84px minmax(92px,1fr) 84px}
+  .network__column--left,.network__column--right{width:84px}
+}
+
+@media (max-width:480px){
+  .network{grid-template-columns:74px minmax(78px,1fr) 74px}
+  .network__column--left,.network__column--right{width:74px}
+}
+
+/* 02 — Cases: corrigir somente no desktop; mobile permanece como já estava */
+@media (min-width:1041px){
+  .case-card__image{
+    overflow:hidden;
+    background:#000;
+  }
+  .case-card__image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center center;
+    transform:scale(1.015);
+    padding:0;
+  }
+  .case-card:hover .case-card__image img{transform:scale(1.05)}
+}
+
+/* 03 — Timeline mobile: linha termina exatamente no passo 05 */
+@media (max-width:760px){
+  .process-line::before,
+  .process-line__progress{
+    display:none!important;
+  }
+
+  .process-line article{
+    position:relative;
+  }
+
+  .process-line article:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    left:17px;
+    top:28px;
+    bottom:-14px;
+    width:2px;
+    background:linear-gradient(180deg,var(--blue),var(--purple),var(--pink));
+    box-shadow:0 0 12px rgba(141,76,255,.24);
+    z-index:0;
+  }
+
+  .process-line article>span{
+    z-index:2;
+  }
+
+  .process-line article:last-child{
+    padding-bottom:0;
+    min-height:auto;
+  }
+}
