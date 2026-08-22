@@ -401,3 +401,23 @@ body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;ba
   .case-card{min-height:0}
   .case-card__image img{padding:0;object-fit:cover}
 }
+
+
+/* =========================================================
+   V6 — últimos ajustes de conteúdo e equilíbrio visual
+   ========================================================= */
+
+/* 01 — Sobre: mais presença para a foto no desktop */
+@media (min-width:1041px){
+  .about .container{width:min(1320px,calc(100% - 48px))}
+  .about__grid{grid-template-columns:.78fr 1.42fr;gap:58px}
+  .profile-card{width:min(100%,440px)}
+}
+
+/* 02 — Problema: composição deliberada em três linhas no desktop */
+@media (min-width:1041px){
+  .story__intro h2 .story-title-line{display:block;white-space:nowrap}
+}
+
+/* 03 — A solução: mais conteúdo sem perder legibilidade */
+.system-map__solution>p{max-width:720px;line-height:1.78}
