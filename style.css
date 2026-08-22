@@ -265,3 +265,76 @@ body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;ba
 }
 
 .platform-logo.is-fallback::before{content:"•";font-size:1rem;line-height:1;color:#fff;opacity:.72}
+
+
+/* =========================================================
+   VC Marketplace — V4 | Correções 1–7
+   ========================================================= */
+
+/* 01 — faixa de plataformas: assets locais reais, monocromáticos */
+.platform-marquee__track{animation-duration:50s}
+.platform-item{gap:11px;opacity:.74}
+.platform-logo{width:34px;height:30px;flex:0 0 34px;border:0;background:transparent;border-radius:0}
+.platform-logo img{width:34px;height:24px;object-fit:contain;filter:none!important;opacity:.84}
+.platform-item:hover{opacity:1}
+.platform-item:hover .platform-logo img{opacity:1}
+.platform-item b{font-size:.8rem;white-space:nowrap}
+
+/* 03 — ícone Crescimento Digital: terceira haste contínua */
+.solution-icon svg{shape-rendering:geometricPrecision}
+
+/* 04 — cases com mais presença e simetria */
+.case-card{min-height:430px;grid-template-columns:1.08fr 1fr}
+.case-card__image{min-width:0}
+.case-card__body{padding:34px 32px}
+.case-card__image img{object-position:center center}
+
+/* 05 — valores /mês sempre na mesma linha */
+.case-metric strong,.about__stats strong{display:inline-flex;align-items:baseline;white-space:nowrap;flex-wrap:nowrap}
+.case-metric strong span,.about__stats .stat-suffix{display:inline!important;white-space:nowrap;flex:0 0 auto}
+.about__stats .stat-suffix{font-size:.40em;margin-left:3px}
+
+/* 06 — seis contatos na mesma linha em desktop */
+.contact-row{grid-template-columns:repeat(6,minmax(0,1fr))}
+.contact-row a{padding:18px 16px}
+.contact-row strong{font-size:.68rem}
+
+/* 07 — rodapé institucional e jurídico */
+.footer{padding:42px 0 26px}
+.footer__top--institutional{display:block}
+.footer__brand-block{max-width:670px}
+.footer__brand-block p{margin:18px 0 0;max-width:650px;color:#7f848e;font-size:.76rem;line-height:1.75}
+.footer__bottom--legal{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.footer__legal-links{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}
+.footer__legal-links a{color:#7b808a;text-decoration:none;transition:color .25s ease}
+.footer__legal-links a:hover{color:#fff}
+.footer__legal-links span{color:#616671}
+
+@media (max-width:1040px){
+  .contact-row{grid-template-columns:repeat(3,1fr)}
+  .contact-row a:nth-child(3n){border-right:0!important}
+  .contact-row a:nth-child(-n+3){border-bottom:1px solid var(--line-soft)!important}
+  .case-card{grid-template-columns:1fr;min-height:0}
+  .case-card__image{height:330px}
+  .footer__bottom--legal{align-items:flex-start;flex-direction:column}
+  .footer__legal-links{justify-content:flex-start}
+}
+@media (max-width:760px){
+  .platform-logo{width:31px;height:27px;flex-basis:31px}
+  .platform-logo img{width:31px;height:22px}
+  .case-card__image{height:310px}
+  .contact-row{grid-template-columns:1fr 1fr}
+  .contact-row a:nth-child(3n){border-right:1px solid var(--line-soft)!important}
+  .contact-row a:nth-child(2n){border-right:0!important}
+  .contact-row a:nth-child(-n+4){border-bottom:1px solid var(--line-soft)!important}
+  .contact-row a:nth-last-child(-n+2){border-bottom:0!important}
+  .footer__brand-block p{font-size:.73rem}
+  .footer__legal-links{gap:10px 16px}
+}
+@media (max-width:480px){
+  .contact-row{grid-template-columns:1fr}
+  .contact-row a,.contact-row a:nth-child(2n),.contact-row a:nth-child(3n){border-right:0!important;border-bottom:1px solid var(--line-soft)!important}
+  .contact-row a:last-child{border-bottom:0!important}
+  .case-card__image{height:280px}
+}
+.platform-logo img[src*="google.com/s2"]{filter:grayscale(1) brightness(0) invert(1)!important;opacity:.84}

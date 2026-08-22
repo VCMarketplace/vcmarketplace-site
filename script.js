@@ -158,15 +158,15 @@
     // Problem -> solution connection animation tied to scroll.
     gsap.set('.network__lines path', { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0.45 });
     const networkTl = gsap.timeline({
-      scrollTrigger: { trigger: '.system-map', start: 'top 72%', end: 'bottom 48%', scrub: 1 }
+      scrollTrigger: { trigger: '.system-map', start: 'top 90%', end: 'bottom 58%', scrub: 0.72 }
     });
     networkTl
       .to('.network__lines path', { strokeDashoffset: 0, opacity: 0.88, duration: 1, stagger: 0.025 }, 0)
       .from('.network__column--left span', { opacity: 0.2, x: -18, duration: 0.55, stagger: 0.04 }, 0)
-      .from('.network__column--right span', { opacity: 0.15, x: 18, duration: 0.55, stagger: 0.04 }, 0.28)
-      .from('.network__hub', { scale: 0.72, filter: 'brightness(.7)', duration: 0.55 }, 0.35)
-      .to('.network__pulse', { opacity: 1, scale: 2.2, duration: 0.7 }, 0.48)
-      .to('.network__pulse', { opacity: 0, scale: 2.8, duration: 0.5 }, 0.72);
+      .from('.network__column--right span', { opacity: 0.15, x: 18, duration: 0.48, stagger: 0.035 }, 0.16)
+      .from('.network__hub', { scale: 0.72, filter: 'brightness(.7)', duration: 0.48 }, 0.22)
+      .to('.network__pulse', { opacity: 1, scale: 2.2, duration: 0.58 }, 0.30)
+      .to('.network__pulse', { opacity: 0, scale: 2.8, duration: 0.42 }, 0.50);
 
     // Story headline breathes slightly while the map enters.
     gsap.to('.story__intro', {
